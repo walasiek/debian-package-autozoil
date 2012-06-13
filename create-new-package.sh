@@ -83,11 +83,9 @@ cp -r ${TEMP_DEBIAN_FILES_DIR}/* ./debian
 rm debian/*~
 rm -rf $TEMP_DEBIAN_FILES_DIR
 
-
-
 # produce deb
 debuild
 
-#mv ../*.deb ../../packages/
+mv ../*.deb ../../packages/
 
 echo "End: " `date`

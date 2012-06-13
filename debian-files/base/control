@@ -3,16 +3,19 @@ Section: perl
 Priority: optional
 Maintainer: Marcin Walas <mwalas@amu.edu.pl>
 Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: perl
+Build-Depends-Indep: perl, hunspell, chktex, languagetool
 Standards-Version: 3.9.2
 Homepage: https://github.com/filipg/autozoil
 
 Package: autozoil
 Architecture: all
-Depends: ${misc:Depends}, ${perl:Depends}, hunspell, chktex
-Description: Autozoil is a comprehensive checker for texts written in (La)Tex.
-  Autozoil is a comprehensive checker for texts written in (La)Tex,
-  mainly MSc theses and scientific papers. Autozoil has been used for
-  Polish and English texts so far. The program was created for checking
-  MSc theses supervised by Filip Graliński at the Faculty of Mathematics
-  and Computer Science of Adam Mickiewicz University in 2010/2011.
+Depends: ${misc:Depends}, ${perl:Depends}, hunspell, chktex, languagetool
+Description: Comprehensive checker for texts written in (La)Tex.
+  Mainly focused on checking MSc theses
+  and scientific papers. Autozoil has
+  been used for Polish and English
+  texts so far. The program was created
+  for checking MSc theses supervised by
+  Filip Graliński at the Faculty of Mathematics
+  and Computer Science of Adam
+  Mickiewicz University in 2010/2011.

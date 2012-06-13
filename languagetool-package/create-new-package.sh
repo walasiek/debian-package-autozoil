@@ -10,8 +10,10 @@ WORKING_DIR=`pwd`/work
 
 download_jar()
 {
-#    wget -O languagetool.zip http://www.languagetool.org/download/LanguageTool-$VERSION.oxt
-    cp ~/Pulpit/languagetool.zip .
+    wget -O languagetool.zip http://www.languagetool.org/download/LanguageTool-$VERSION.oxt
+
+    # for testing:
+#    cp ~/Pulpit/languagetool.zip .
 }
 
 
