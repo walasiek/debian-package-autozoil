@@ -1,0 +1,16 @@
+Source: languagetool
+Section: extra
+Priority: optional
+Maintainer: Marcin Walas <mwalas@amu.edu.pl>
+Build-Depends: debhelper (>= 5), openjdk-6-jre
+Standards-Version: 3.9.2
+Homepage: http://www.languagetool.org/
+
+Package: languagetool
+Architecture: all
+Depends: openjdk-6-jre
+Description: LanguageTool is an Open Source style and grammar proofreading software.
+    LanguageTool is an Open Source style and grammar proofreading software for English, French, German, Polish, Dutch, Romanian,
+    and a lot of other languages. You can think of LanguageTool as a software to detect errors that a simple
+    spell checker cannot detect, e.g. mixing up there/their, no/now etc.
+    It can also detect some grammar mistakes. It does not include spell checking.
