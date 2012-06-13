@@ -1,0 +1,19 @@
+package Autozoil;
+
+our $VERSION = '@@@@@@VERSION_NUMBER@@@@@@';
+use strict;
+use warnings;
+use utf8;
+
+1;
+
+__END__
+
+=head1 NAME
+
+Autozoil is a comprehensive checker for texts written in (La)Tex,
+mainly MSc theses and scientific papers.
+
+@@@FROM_MARKDOWN@@@
+
+=cut
