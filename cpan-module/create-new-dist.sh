@@ -2,6 +2,10 @@
 
 VERSION=$1
 
+SOURCE_CODE_PATH=./src/autozoil
+MAIN_PATH=$SOURCE_CODE_PATH/Autozoil
+TESTS_PATH=$SOURCE_CODE_PATH/t/
+
 # ===========================
 # Functions
 
@@ -25,6 +29,7 @@ preprocess_autozoil_pm_pre()
     mv $MODULE_DIRECTORY_NAME/lib/Autozoil.pm.pre $MODULE_DIRECTORY_NAME/lib/Autozoil.pm
     PREPROCESS_FILENAME=$MODULE_DIRECTORY_NAME/lib/Autozoil.pm
 
+    perl preprocess-main-pm-file.pl $PREPROCESS_FILENAME $SOURCE_CODE_PATH | sponge $PREPROCESS_FILENAME
     cat $PREPROCESS_FILENAME | sed -r "s/@@@@@@VERSION_NUMBER@@@@@@/$VERSION/"|sponge $PREPROCESS_FILENAME
 }
 
@@ -35,7 +40,6 @@ copy_template()
     cp -rf $TEMPLATE_DIRECTORY_NAME $MODULE_DIRECTORY_NAME
     run_git_clean $MODULE_DIRECTORY_NAME
 
-    # @todo preprocess Autozoil/lib/Autozoil.pm.pre
     preprocess_autozoil_pm_pre
 
     if [[ ! -d $MODULE_DIRECTORY_NAME/t ]]; then
@@ -73,12 +77,9 @@ if [[ -e $MODULE_DIRECTORY_NAME ]]; then
     rm -rf $MODULE_DIRECTORY_NAME
 fi
 
-SOURCE_CODE_PATH=./src/autozoil
 
 download_autozoil_from_git
 
-MAIN_PATH=$SOURCE_CODE_PATH/Autozoil
-TESTS_PATH=$SOURCE_CODE_PATH/t/
 
 copy_template
 

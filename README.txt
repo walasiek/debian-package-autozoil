@@ -5,6 +5,8 @@ Install:
 
 sudo apt-get install build-essential devscripts ubuntu-dev-tools debhelper dh-make diff patch cdbs quilt gnupg fakeroot lintian  pbuilder piuparts dh-make-perl
 
+Install cpan module Markdown::Pod:
+sudo cpan -f -i Markdown::Pod 
 
 Create package
 ==============
