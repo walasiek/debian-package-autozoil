@@ -17,7 +17,7 @@ override_dh_perl:
 	dh_perl
 	find debian -type f -name .packlist -delete ;
 	find debian -type f -name perllocal.pod -delete ;
-	find debian -type d -regex '.*usr\/lib\/perl\/.*' -exec rm -rf \{\} \; ;
+	[ -d debian/autozoil/usr/lib/perl ] && rm -rf debian/autozoil/usr/lib/perl ;
 
 %:
 	dh $@
