@@ -84,7 +84,11 @@ rm debian/*~
 rm -rf $TEMP_DEBIAN_FILES_DIR
 
 # produce deb
-debuild
+debuild  --no-tgz-check -us -uc
+
+if [[ ! -d ../../packages/ ]]; then
+    mkdir ../../packages/
+fi
 
 mv ../*.deb ../../packages/
 

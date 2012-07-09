@@ -15,6 +15,7 @@ WriteMakefile(
         'Test::More' => 0,
         'TAP::Harness::JUnit' => 0,
         'XML::Simple' => 0,
+        'XML::Writer' => 0,
     },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
          (ABSTRACT_FROM  => 'lib/Autozoil.pm', # retrieve abstract from module

@@ -9,5 +9,15 @@
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
+
+override_dh_prep:
+	dh_prep -X=perllocal.pod -X=.packlist
+
+override_dh_perl:
+	dh_perl
+	find debian -type f -name .packlist -delete ;
+	find debian -type f -name perllocal.pod -delete ;
+	find debian -type d -regex '.*usr\/lib\/perl\/.*' -exec rm -rf \{\} \; ;
+
 %:
-	dh $@ 
+	dh $@

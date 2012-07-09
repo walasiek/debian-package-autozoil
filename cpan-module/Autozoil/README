@@ -1,4 +1,3 @@
-@todo version 0.001
 ==========================
 
 INSTALLATION
@@ -17,7 +16,14 @@ DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-  @todo
+ FileHandle
+ Getopt::Long
+ String::Util
+ Test::Deep
+ Test::More
+ TAP::Harness::JUnit
+ XML::Simple
+ XML::Writer
 
 COPYRIGHT AND LICENCE
 
